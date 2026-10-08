@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EduGenie - Google Gemini Powered Learning Assistant" />
+  <title>EduGenie | Learning Assistant</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">E</div><div><strong>EduGenie</strong><span>AI Learning Assistant</span></div></div>
+      <nav>
+        <button class="nav-item active" data-view="dashboard">⌂ <span>Dashboard</span></button>
+        <button class="nav-item" data-view="chat">✦ <span>AI Tutor</span></button>
+        <button class="nav-item" data-view="tools">⚡ <span>Study Tools</span></button>
+        <button class="nav-item" data-view="about">ⓘ <span>About Project</span></button>
+      </nav>
+      <div class="sidebar-footer"><div class="status-dot"></div><span id="modeText">Checking AI mode...</span></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><div><span class="eyebrow">BCA FINAL YEAR PROJECT</span><h1 id="pageTitle">Learn smarter with EduGenie</h1></div><div class="top-actions"><button id="clearBtn" class="ghost-btn">Clear chat</button><div class="avatar">N</div></div></header>
+
+      <section id="dashboardView" class="view active">
+        <div class="hero-card">
+          <div><span class="pill">Powered by Google Gemini</span><h2>Your personal study companion.</h2><p>Ask questions, simplify difficult concepts, create quizzes, build flashcards and plan your study time.</p><button class="primary-btn" data-open-chat>Start learning →</button></div>
+          <div class="hero-art"><div class="orb orb1"></div><div class="orb orb2"></div><div class="book">📘</div></div>
+        </div>
+        <div class="section-heading"><div><span class="eyebrow">QUICK ACCESS</span><h3>What do you want to study?</h3></div></div>
+        <div class="topic-grid">
+          <button class="topic-card" data-topic="Explain Data Structures"><span>🌳</span><strong>Data Structures</strong><small>Learn trees, stacks, queues & more</small></button>
+          <button class="topic-card" data-topic="Explain Java OOP concepts"><span>☕</span><strong>Java & OOP</strong><small>Understand classes, inheritance and JVM</small></button>
+          <button class="topic-card" data-topic="Explain database normalization"><span>🗄️</span><strong>DBMS</strong><small>Practice SQL and database concepts</small></button>
+          <button class="topic-card" data-topic="Explain computer networks"><span>🌐</span><strong>Networks</strong><small>Make protocols and layers simple</small></button>
+        </div>
+        <div class="stats"><div><strong>5</strong><span>AI study tools</span></div><div><strong>24/7</strong><span>Learning support</span></div><div><strong>1</strong><span>Simple workspace</span></div></div>
+      </section>
+
+      <section id="chatView" class="view">
+        <div class="chat-layout">
+          <div class="chat-panel">
+            <div id="messages" class="messages"><div class="message assistant"><div class="message-icon">E</div><div><strong>EduGenie</strong><p>Hello! I’m ready to help you study. Ask me a question or choose a study tool.</p></div></div></div>
+            <form id="chatForm" class="composer"><textarea id="prompt" rows="2" placeholder="Ask EduGenie anything about your subject..." required></textarea><button class="send-btn" type="submit">Send ↗</button></form>
+          </div>
+          <aside class="tool-panel"><h3>Study tools</h3><p>Choose a mode for your next request.</p><button class="tool-btn active" data-action="explain">💡 <span><b>Explain</b><small>Simple step-by-step teaching</small></span></button><button class="tool-btn" data-action="summarize">📝 <span><b>Summarize</b><small>Exam-ready key points</small></span></button><button class="tool-btn" data-action="quiz">❓ <span><b>Quiz me</b><small>Test your understanding</small></span></button><button class="tool-btn" data-action="flashcards">🧠 <span><b>Flashcards</b><small>Quick memory practice</small></span></button><button class="tool-btn" data-action="plan">📅 <span><b>Study plan</b><small>7-day revision plan</small></span></button></aside>
+        </div>
+      </section>
+
+      <section id="toolsView" class="view"><div class="section-heading"><div><span class="eyebrow">AI STUDY TOOLS</span><h2>Turn any topic into practice</h2></div></div><div class="tools-grid"><div class="big-tool"><span>💡</span><h3>Explain a topic</h3><p>Get a beginner-friendly explanation with examples.</p><button data-tool-topic="explain">Use tool</button></div><div class="big-tool"><span>📝</span><h3>Summarize notes</h3><p>Convert long notes into concise revision points.</p><button data-tool-topic="summarize">Use tool</button></div><div class="big-tool"><span>❓</span><h3>Generate a quiz</h3><p>Practice with multiple-choice questions.</p><button data-tool-topic="quiz">Use tool</button></div><div class="big-tool"><span>🧠</span><h3>Make flashcards</h3><p>Create compact Q&A cards for revision.</p><button data-tool-topic="flashcards">Use tool</button></div><div class="big-tool"><span>📅</span><h3>Build a study plan</h3><p>Organize a seven-day learning routine.</p><button data-tool-topic="plan">Use tool</button></div></div></section>
+
+      <section id="aboutView" class="view"><div class="about-card"><span class="pill">PROJECT DOCUMENTATION</span><h2>EduGenie: Google Gemini Powered Learning Assistant</h2><p>EduGenie is a full-stack BCA final-year project that demonstrates how generative AI can support students through an easy-to-use learning interface.</p><div class="about-grid"><div><h3>Frontend</h3><p>HTML5, CSS3 and JavaScript with a responsive dashboard and chat interface.</p></div><div><h3>Backend</h3><p>Node.js and Express provide API routes and keep the Gemini API key on the server.</p></div><div><h3>AI Layer</h3><p>Google's official <code>@google/genai</code> JavaScript SDK is used for Gemini text generation.</p></div><div><h3>Demo mode</h3><p>The project can run without an API key so the interface can be demonstrated locally.</p></div></div><div class="note"><b>For submission:</b> Add your API key only to the local <code>.env</code> file. Never upload it to GitHub or include it in screenshots.</div></div></section>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
